@@ -1,0 +1,5 @@
+foo:
+  bar:
+    test: 'Cool'
+    new: '2nd'
+  pls-work: 'YES'

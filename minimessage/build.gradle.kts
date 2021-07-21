@@ -9,12 +9,16 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven("https://oss.sonatype.org/content/repositories/snapshots/")
 }
 
 dependencies {
     implementation(kotlin("stdlib"))
 
-    implementation("com.google.code.gson:gson:2.8.7")
+    implementation("net.kyori:adventure-api:4.8.1")
+    implementation("net.kyori:adventure-text-minimessage:4.1.0-SNAPSHOT")
+
+    api(project(":core"))
 }
 
 tasks {

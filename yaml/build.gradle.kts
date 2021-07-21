@@ -9,12 +9,15 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven("https://oss.sonatype.org/content/repositories/snapshots/")
 }
 
 dependencies {
     implementation(kotlin("stdlib"))
 
-    implementation("com.google.code.gson:gson:2.8.7")
+    implementation("org.yaml:snakeyaml:1.21")
+
+    api(project(":core"))
 }
 
 tasks {

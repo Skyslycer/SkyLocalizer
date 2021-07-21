@@ -1,20 +1,23 @@
 plugins {
     kotlin("jvm") version "1.5.21"
-    `maven-publish`
     id("com.github.johnrengelman.shadow") version "7.0.0"
+    `maven-publish`
 }
 
 group = "de.skyslycer.skylocalizer"
-version = "1.0-SNAPSHOT"
+version = "unspecified"
 
 repositories {
     mavenCentral()
+    maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
 }
 
 dependencies {
     implementation(kotlin("stdlib"))
 
-    implementation("com.google.code.gson:gson:2.8.7")
+    compileOnly("org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT")
+
+    api(project(":core"))
 }
 
 tasks {
@@ -92,3 +95,4 @@ class PublishData(private val project: Project) {
             name.plus(append).plus(if (appendCommit && addCommit) "-".plus(commitHash) else "")
     }
 }
+
