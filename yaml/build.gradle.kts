@@ -39,7 +39,7 @@ java {
 publishing {
     val publishData = PublishData(project)
     publications.create<MavenPublication>("maven") {
-        from(components["kotlin"])
+        from(components["java"])
         groupId = project.group as String?
         artifactId = project.name
         version = publishData.getVersion()
