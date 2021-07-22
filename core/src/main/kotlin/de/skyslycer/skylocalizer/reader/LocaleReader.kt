@@ -5,6 +5,6 @@ import java.io.IOException
 import kotlin.jvm.Throws
 
 interface LocaleReader {
-    @Throws(IOException::class, UnhandledReaderTypeException::class)
+    @Throws(Throwable::class)
     fun read(reader: Any): Map<String, String>
 }

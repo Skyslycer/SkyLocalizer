@@ -4,7 +4,6 @@ import com.google.gson.Gson
 import com.google.gson.JsonIOException
 import com.google.gson.JsonSyntaxException
 import de.skyslycer.skylocalizer.exceptions.UnhandledReaderTypeException
-import de.skyslycer.skylocalizer.utils.JsonUtils
 import de.skyslycer.skylocalizer.utils.MapUtils
 import java.io.BufferedReader
 import java.io.File
@@ -33,6 +32,6 @@ class JsonReader : LocaleReader {
 
     @Throws(JsonIOException::class, JsonSyntaxException::class)
     private fun readLocale(reader: BufferedReader): Map<String, String> {
-        return JsonUtils.getJsonObjectsFromMap(null, gson.fromJson(reader, Map::class.java))
+        return MapUtils.getObjectsFromMap(null, gson.fromJson(reader, Map::class.java))
     }
 }

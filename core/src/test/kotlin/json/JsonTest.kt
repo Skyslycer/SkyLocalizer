@@ -1,12 +1,12 @@
 package json
 
 import com.google.gson.Gson
-import de.skyslycer.skylocalizer.utils.JsonUtils
+import de.skyslycer.skylocalizer.utils.MapUtils
 
 fun main() {
     val map: MutableMap<*, *> = Gson().fromJson(
         """{"foo": {"bar": {"stab": "yes", "lel": "2"}}}""", MutableMap::class.java
     )
 
-    println(JsonUtils.getJsonObjectsFromMap(null, map))
+    println(MapUtils.getObjectsFromMap(null, map))
 }

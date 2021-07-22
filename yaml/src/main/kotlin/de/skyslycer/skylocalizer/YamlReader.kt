@@ -2,7 +2,7 @@ package de.skyslycer.skylocalizer
 
 import de.skyslycer.skylocalizer.exceptions.UnhandledReaderTypeException
 import de.skyslycer.skylocalizer.reader.LocaleReader
-import de.skyslycer.skylocalizer.utils.JsonUtils
+import de.skyslycer.skylocalizer.utils.MapUtils
 import org.yaml.snakeyaml.Yaml
 import java.io.BufferedReader
 import java.io.File
@@ -28,6 +28,6 @@ class YamlReader : LocaleReader {
     }
 
     private fun readLocale(reader: BufferedReader): Map<String, String> {
-        return JsonUtils.getJsonObjectsFromMap(null, Yaml().load(reader))
+        return MapUtils.getObjectsFromMap(null, Yaml().load(reader))
     }
 }
