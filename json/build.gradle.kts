@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "de.skyslycer.skylocalizer"
-version = "1.2"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -15,8 +15,7 @@ repositories {
 dependencies {
     compileOnly(kotlin("stdlib"))
 
-    compileOnly("net.kyori:adventure-api:4.8.1")
-    implementation("net.kyori:adventure-text-minimessage:4.1.0-SNAPSHOT")
+    implementation("com.google.code.gson:gson:2.8.7")
 
     api(project(":core"))
 }

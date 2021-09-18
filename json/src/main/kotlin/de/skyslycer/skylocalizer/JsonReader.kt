@@ -1,9 +1,10 @@
-package de.skyslycer.skylocalizer.reader
+package de.skyslycer.skylocalizer
 
 import com.google.gson.Gson
 import com.google.gson.JsonIOException
 import com.google.gson.JsonSyntaxException
 import de.skyslycer.skylocalizer.exceptions.UnhandledReaderTypeException
+import de.skyslycer.skylocalizer.reader.LocaleReader
 import de.skyslycer.skylocalizer.utils.MapUtils
 import java.io.BufferedReader
 import java.io.File

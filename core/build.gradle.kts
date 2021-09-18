@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "de.skyslycer.skylocalizer"
-version = "1.1"
+version = "1.2"
 
 repositories {
     mavenCentral()
@@ -13,8 +13,6 @@ repositories {
 
 dependencies {
     compileOnly(kotlin("stdlib"))
-
-    implementation("com.google.code.gson:gson:2.8.7")
 }
 
 tasks {
