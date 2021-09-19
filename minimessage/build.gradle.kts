@@ -15,7 +15,7 @@ repositories {
 dependencies {
     compileOnly(kotlin("stdlib"))
 
-    compileOnly("net.kyori:adventure-api:4.8.1")
+    compileOnly("net.kyori:adventure-api:4.9.1")
     implementation("net.kyori:adventure-text-minimessage:4.1.0-SNAPSHOT")
 
     api(project(":core"))
