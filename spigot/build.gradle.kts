@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "de.skyslycer.skylocalizer"
-version = "1.1"
+version = "1.2"
 
 repositories {
     mavenCentral()
@@ -15,7 +15,7 @@ repositories {
 dependencies {
     compileOnly(kotlin("stdlib"))
 
-    compileOnly("org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT")
+    compileOnly("org.spigotmc:spigot-api:1.18.1-R0.1-SNAPSHOT")
 
     api(project(":core"))
 }
